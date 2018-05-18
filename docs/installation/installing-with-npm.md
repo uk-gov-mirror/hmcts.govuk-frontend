@@ -1,4 +1,6 @@
-### Requirements
+# Installing GOV.UK Frontend with node package manager (NPM)
+
+## Requirements
 
 To use GOV.UK Frontend with NPM you must:
 
@@ -45,7 +47,7 @@ npm install --save @govuk-frontend/all
 After you have installed GOV.UK Frontend the `@govuk-frontend` package will
 appear in your `node_modules` folder.
 
-### Import styles
+### Importing styles
 
 You need to import the GOV.UK Frontend styles into the main Sass file in your
 project. You should place the below code before your own Sass rules (or Sass
@@ -64,7 +66,7 @@ your Sass file:
   @import "node_modules/@govuk-frontend/button/button";
   ```
 
-#### Optional: Resolve import paths
+#### Optional: Resolving import paths
 
 If you wish to resolve the above `@import` paths in your build (in order to
 avoid prefixing paths with `node_modules`), you should add `node_modules` to
@@ -87,9 +89,9 @@ gulp.task('sass', function () {
 
 ```
 
-(If you compile Sass to CSS in your project, your build tasks will already
+If you compile Sass to CSS in your project, your build tasks will already
 include something similar to the above task - in that case, you will just need
-to include add `includePaths` to it.)
+to include add `includePaths` to it.
 
 After resolving the import paths you can import GOV.UK Frontend by using:
 
@@ -97,39 +99,53 @@ After resolving the import paths you can import GOV.UK Frontend by using:
 @import "@govuk-frontend/button/button";
 ```
 
-### Import JavaScript
+### Importing JavaScript
 
-You need to import the GOV.UK Frontend scripts into the main JavaScript file in your project.
+Some of the JavaScript included in GOV.UK Frontend improves the usability and
+accessibility of the components. You should make sure that you are importing and
+initialising it in your application to ensure that all users can properly use it
+successfully.
 
-To import and initialise all components that require JavaScript, add the below to your main JavaScript file:
-```JS
-import All from '@govuk-frontend/all/all'
+For example, the JavaScript will:
+
+- allow links styled as buttons to be triggered with the space bar when focused,
+  which matches the behaviour of native buttons and the way the button is
+  described when using assistive technologies.
+- enhance the Details component to help users of assistive technologies
+  understand whether it is expanded or collapsed, and to make the component
+  behave correctly for users of Internet Explorer 8.
+
+You can include and initialise the Javascript for all components by adding an import statement to your application's main JavaScript file:
+
+```js
+import All from '@govuk-frontend/all'
 ```
 
-To import an individual component (for example a button), add the below to your main JavaScript file:
-```JS
-import Button from '@govuk-frontend/button/button'
-```
+Alternatively, you can import and initialise individual components, such as the
+Button component:
 
-Use the following to initialise the button component:
+```js
+import Button from '@govuk-frontend/components/button/button'
 
-```JS
 new Button().init()
 ```
 
-Note: The import syntax you should use depends on the JavaScript module format used by your bundler. For example, if it is using `CommonJS`, use
+The import syntax you should use depends on the JavaScript module format
+used by your bundler. For example, if you are using `CommonJS`, you would
+instead use:
 
-```JS
+```js
 require('@govuk-frontend/all/all')
 ```
 
-##### Include with Webpack 4
+#### Including JavaScript with Webpack 4
 Here's an example of setting up [`webpack.config.js`](examples/webpack/webpack.config.js) in your project
 
-##### Include with Gulp and Rollup
-You can configure Gulp and Rollup as part of your build process using the [gulp-better-rollup](https://www.npmjs.com/package/gulp-better-rollup) plugin. Below is an example:
+#### Include JavaScript with Gulp and Rollup
+You can configure Gulp and Rollup as part of your build process using the
+[gulp-better-rollup](https://www.npmjs.com/package/gulp-better-rollup) plugin:
 
-```JS
+```js
 gulp.task('compile', () => {
   return gulp.src('./js/*.js')
     .pipe(rollup({
@@ -141,7 +157,10 @@ gulp.task('compile', () => {
 })
 
 ```
-(If you compile JavaScript in your project, your build tasks will already include something similar to the above task - in that case, you will just need to pipe `rollup` to it.)
+
+If you compile JavaScript in your project, your build tasks will already include
+something similar to the above task - in that case, you will just need to pipe
+`rollup` to it.
 
 ### Import images
 
