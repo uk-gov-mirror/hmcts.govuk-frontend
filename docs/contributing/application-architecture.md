@@ -1,36 +1,3 @@
-# GOV.UK Frontend
-
-## Coding standards
-
-- [Component API](component-api.md)
-- [Components](components.md)
-- [CSS](coding-standards/css.md)
-- [IE8 support](legacy-ie.md)
-- [JavaScript](coding-standards/js.md)
-
-## Installing
-
-Clone the repository
-
-```
-git clone git@github.com:alphagov/govuk-frontend.git
-```
-
-Install dependencies
-
-```
-npm install
-```
-
-## Running
-
-```
-npm start
-```
-By default the app runs on port 3000, so the app will be available at: http://localhost:3000
-
-See [development and publishing tasks](development-and-publish-tasks.md) for more information about the npm scripts.
-
 ## Application architecture
 
 - `app/`
@@ -89,7 +56,7 @@ See [development and publishing tasks](development-and-publish-tasks.md) for mor
 
 - `tasks/`
 
-  Application modules and helpers.
+  Application modules and helpers. See [development and publishing tasks](development-and-publish-tasks.md) for more information about the tasks.
 
 
 ### Auto-generated directories  
@@ -101,19 +68,3 @@ See [development and publishing tasks](development-and-publish-tasks.md) for mor
 - `public/`
 
   Assets built for the preview app.
-
-## Testing and linting
-
-```
-npm test
-```
-
-Running all tests will trigger [standard](https://github.com/standard/standard) and [sass-lint](https://github.com/sasstools/sass-lint) for lint and [Jest](https://github.com/facebook/jest) for unit and functional tests.
-
-## Deploying
-You can [run the preview app locally](#running) or deploy it straight to a Heroku instance.
-
-An existing Heroku instance can be found at: [http://govuk-frontend-review.herokuapp.com/](http://govuk-frontend-review.herokuapp.com/)
-
-## Publishing
-You need npm credentials to publish a new release. For the detailed publishing process see the [publishing  documentation](publishing.md).

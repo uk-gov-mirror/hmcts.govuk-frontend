@@ -1,5 +1,7 @@
 # Coding standards
 
-## [CSS](/docs/coding-standards/css.md)
-
-## [JavaScript](/docs/coding-standards/js.md)
+- [Component API](../component-api.md)
+- [Components](../components.md)
+- [CSS](css.md)
+- [IE8 support](../.../installation/supporting-internet-explorer-8.md)
+- [JavaScript](js.md)
