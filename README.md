@@ -9,6 +9,7 @@ Frontend, please get in touch with the [Design System
 team](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk) at
 GDS.** :rotating_light:
 
+
 ## What is GOV.UK Frontend?
 
 GOV.UK Frontend contains the code you need to start building a user interface
@@ -18,14 +19,20 @@ See live examples of GOV.UK Frontend components, and guidance on when to use
 them in your service, in the [GOV.UK Design
 System](https://govuk-design-system-production.cloudapps.digital/).
 
+
 ## Quick start
 
-There are 2 ways to start using GOV.UK Frontend:
+There are 2 ways to start using GOV.UK Frontend.
 
-* we recommend [installing GOV.UK Frontend using node package manager
-  (npm)](docs/installation/installing-with-npm.md)
-* you can also [download the assets (CSS, JavaScript) from
-  GitHub](docs/installation/installing-by-copying-assets.md)
+We recommend [installing GOV.UK Frontend using node package manager
+(npm)](docs/installation/installing-with-npm.md).
+
+You can also [download the compiled and minified assets (CSS, JavaScript) from
+GitHub](docs/installation/installing-from-dist.md).
+
+Once installed, you will be able to use the code from the examples in the
+[GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/)
+in your service.
 
 #### Global Styles
 
@@ -55,12 +62,6 @@ Examples of GOV.UK Frontend polyfills:
 
 #### Bundling JavaScript
 The JavaScript included in GOV.UK Frontend components are in [UMD (Universal Module Definition)](https://github.com/umdjs/umd) format which makes it compatible with AMD (Asynchronous module definition) and CommonJS.
-
-### Usage
-
-Copy and paste code from the examples in the
-[GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/)
-to use GOV.UK Frontend in your service.
 
 
 ## Browser support
