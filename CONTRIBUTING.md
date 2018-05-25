@@ -42,6 +42,14 @@ This will build sources, serve pages and watch for changes.
 npm start
 ```
 
+## Deploying
+
+See [deploying](/docs/contributing/deploying).
+
+## Application architecture
+
+See [application architecture](/docs/contributing/application-architecture.md) for an overview of the directories in this repository.
+
 ## Conventions to follow
 
 ### Indentation and whitespace
@@ -67,6 +75,31 @@ To check the whole codebase, run:
 
 For more detail, see our [coding standards for JavaScript](/docs/coding-standards/js.md).
 
+If you need polyfills for features that are not yet included in this project, please see the following guide on [how to add polyfills](/docs/contributing/polyfilling.md).
+
+### Components and Nunjucks API
+
+Find components in `src/components`.
+
+See our [coding standards for components](/docs/coding-standards/components.md) and [coding standards for Nunjucks macros](/docs/coding-standards/nunjucks-api.md).
+
+### Component folder structure and naming
+
+Component folder and files should be singular, except in cases where they are more commonly used in groups, for example, radios, breadcrumbs and checkboxes.
+
+An example component exists in `src/components/component-example`.
+
+Use this as the basis for creating new components.
+
+The folder structure should be:
+
+    component-name
+      - `_component-name.scss`
+      - `component-name.html`
+      - `component-name.js`
+      - `README.md`
+
+
 ### Testing components on their own
 You can run a subset of the test suite that only tests components by running:
 
@@ -84,25 +117,12 @@ If a snapshot test fails, review the difference in the console. If the change is
 
 This will update the snapshot file. Commit this file separately with a commit message that explains you're updating the snapshot file and an explanation of what caused the change.
 
-### Component folder structure and naming
+## Browser support
+Your contribution needs to work with certain browsers as set out in [README](../../README.md). See also [supporting Internet Explorer 8](../installation/supporting-internet-explorer-8.md).
 
-Find components in `src/components`.
+## Application tasks
 
-Component folder and files should be singular, except in cases where they are more commonly used in groups, for example, radios, breadcrumbs and checkboxes.
-
-An example component exists in `src/components/component-example`.
-
-Use this as the basis for creating new components.
-
-The folder structure should be:
-
-    component-name
-      - `_component-name.scss`
-      - `component-name.html`
-      - `component-name.js`
-      - `README.md`
-
-
+See [tasks](/docs/contributing/tasks.md).
 
 ## Updating Changelog
 
@@ -123,7 +143,7 @@ See `CHANGELOG` for more information.
 
 ## Releasing a new version
 
-See `docs/publishing`
+See [publishing](publishing.md).
 
 ## Commit hygiene
 
