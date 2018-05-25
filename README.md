@@ -51,7 +51,11 @@ $govuk-global-styles: true;
 @import "govuk-frontend/all/all";
 ```
 
-### Polyfills
+See [CSS Coding Standards](/docs/coding-standards/css.md) for more details of how CSS is used in the project.
+
+### JavaScript
+
+#### Polyfills
 A JavaScript polyfill provides functionality on older browsers or assistive technology that do not natively support it.
 
 The polyfills provided with GOV.UK Frontend aim to fix usability and accessibility issues. If there is a JavaScript included in the component directory, it is important to import and initialise it in your project to ensure that all users can properly use the component (see [Import Javscript](#import-javascript)).  
@@ -60,9 +64,10 @@ Examples of GOV.UK Frontend polyfills:
 1. Links styled to look like buttons lack button behaviour. The polyfill script will allow them to be triggered with a space key after they’ve been focused, to match standard buttons.
 2. Details component polyfill includes accessibility enhancements to ensure that the user is given appropriate information about the state (collapsed/expanded) of the component. The polyfill also makes the component behave correctly on IE8.
 
-### Bundling JavaScript
+#### Bundling JavaScript
 The JavaScript included in GOV.UK Frontend components are in [UMD (Universal Module Definition)](https://github.com/umdjs/umd) format which makes it compatible with AMD (Asynchronous module definition) and CommonJS.
 
+See [JavaScript Coding Standards](/docs/coding-standards/js.md) for more details of how JavaScript is used in the project.
 
 ## Browser support
 
