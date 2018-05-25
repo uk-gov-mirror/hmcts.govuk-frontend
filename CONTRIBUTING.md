@@ -2,6 +2,24 @@
 
 We're not ready for contributions yet, this document exists as a guide for those working on govuk-frontend.
 
+## Contents of this file
+- [Code of conduct](#code-of-conduct)
+- [Running locally](#running-locally)
+- [Deploying](#deploying)
+- [Application architecture](#application-architecture)
+- [Conventions to follow](#conventions-to-follow)
+ - [Indentation and whitespace](#indentation-and-whitespace)
+ - [CSS](#css)
+ - [JavaScript](#javascript)
+ - [Components and Nunjucks API](#components-and-nunjucks-api)
+- [Testing and linting](#testing-and-linting)
+- [Browser support](#browser-support)
+- [Application tasks](#running-application-tasks)
+- [Updating Changelog](#updating-changelog)
+- [Versioning](#versioning)
+- [Releasing a new version](#releasing-a-new-version)
+- [Commit hygiene](#commit-hygiene)
+
 ## Code of Conduct
 Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing.
 
