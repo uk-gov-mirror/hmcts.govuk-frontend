@@ -1,7 +1,7 @@
 # Coding standards
 
-- [Component API](../component-api.md)
-- [Components](../components.md)
+- [Components](components.md)
+- [Nunjucks API](nunjucks-api.md)
 - [CSS](css.md)
-- [IE8 support](../.../installation/supporting-internet-explorer-8.md)
 - [JavaScript](js.md)
+- [IE8 support](../.../installation/supporting-internet-explorer-8.md)
