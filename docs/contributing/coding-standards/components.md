@@ -14,6 +14,22 @@ Components must:
 * set internal margins in a single direction
 * not rely on any other selector outside of the component scss file to style its children
 
+## Component folder structure and naming
+
+Component folder and files should be singular, except in cases where they are more commonly used in groups, for example, radios, breadcrumbs and checkboxes.
+
+An example component exists in `src/components/component-example`.
+
+Use this as the basis for creating new components.
+
+The folder structure should be:
+
+    component-name
+      - `_component-name.scss`
+      - `component-name.html`
+      - `component-name.js`
+      - `README.md`
+
 ## Testing components on their own
 You can run a subset of the test suite that only tests components by running:
 

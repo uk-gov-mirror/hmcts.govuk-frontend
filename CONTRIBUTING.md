@@ -52,22 +52,6 @@ The CI lints SASS and JavaScript, and runs unit and functional tests with Node.
 
 For more detail, see [testing and linting](/docs/contributing/testing-and-linting.md).
 
-### Component folder structure and naming
-
-Component folder and files should be singular, except in cases where they are more commonly used in groups, for example, radios, breadcrumbs and checkboxes.
-
-An example component exists in `src/components/component-example`.
-
-Use this as the basis for creating new components.
-
-The folder structure should be:
-
-    component-name
-      - `_component-name.scss`
-      - `component-name.html`
-      - `component-name.js`
-      - `README.md`
-
 ## Browser support
 Your contribution needs to work with certain browsers as set out in [README](../../README.md). See also [supporting Internet Explorer 8](../installation/supporting-internet-explorer-8.md).
 
