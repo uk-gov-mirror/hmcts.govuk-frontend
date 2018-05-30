@@ -3,7 +3,7 @@
   "description": "govuk-frontend",
   "version": "0.0.1",
   "engines": {
-    "node": "8.9.4"
+    "node": ">=8.9.4 <9.0.0"
   },
   "private": "true",
   "repository": "alphagov/govuk-frontend",
