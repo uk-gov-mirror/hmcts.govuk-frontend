@@ -4,7 +4,7 @@
 
 @import "../../helpers/typography";
 
-@include govuk-exports("header") {
+@include govuk-exports("govuk-header") {
 
   $govuk-header-background: $govuk-black;
   $govuk-header-border-color: $govuk-blue;

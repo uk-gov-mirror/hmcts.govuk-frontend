@@ -2,7 +2,7 @@
 @import "../../tools/all";
 @import "../../helpers/all";
 
-@include govuk-exports("breadcrumbs") {
+@include govuk-exports("govuk-breadcrumbs") {
 
   // Size of chevron (excluding border)
   $chevron-size: 7px;

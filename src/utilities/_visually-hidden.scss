@@ -1,4 +1,4 @@
-@include govuk-exports("visually-hidden") {
+@include govuk-exports("govuk-visually-hidden") {
   .govuk-visually-hidden {
     @include govuk-visually-hidden;
   }
