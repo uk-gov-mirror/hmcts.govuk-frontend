@@ -346,6 +346,19 @@
             "html": "<div class=\"govuk-form-group\">\n\n  <div class=\"govuk-date-input\">\n    \n    <div class=\"govuk-date-input__item\">\n      <div class=\"govuk-form-group\">\n        <label class=\"govuk-label govuk-date-input__label\" for=\"undefined-day\">\n          Day\n        </label>\n      \n      <input class=\"govuk-input govuk-date-input__input \" id=\"undefined-day\" name=\"day\" type=\"text\" pattern=\"[0-8]*\" inputmode=\"numeric\">\n      </div>\n    </div>\n  \n  </div>\n\n</div>"
         },
         {
+            "name": "custom inputmode",
+            "options": {
+                "items": [
+                    {
+                        "name": "day",
+                        "pattern": "[0-9X]*",
+                        "inputmode": "text"
+                    }
+                ]
+            },
+            "html": "<div class=\"govuk-form-group\">\n\n  <div class=\"govuk-date-input\">\n    \n    <div class=\"govuk-date-input__item\">\n      <div class=\"govuk-form-group\">\n        <label class=\"govuk-label govuk-date-input__label\" for=\"undefined-day\">\n          Day\n        </label>\n      \n      <input class=\"govuk-input govuk-date-input__input \" id=\"undefined-day\" name=\"day\" type=\"text\" pattern=\"[0-9X]*\" inputmode=\"text\">\n      </div>\n    </div>\n  \n  </div>\n\n</div>"
+        },
+        {
             "name": "with nested name",
             "options": {
                 "items": [
