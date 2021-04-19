@@ -12,9 +12,14 @@
 
 {% set variants = {
   'Link': '',
-  'Link with no visited state': 'govuk-link--no-visited-state',
+  'No visited state': 'govuk-link--no-visited-state',
   'Text link': 'govuk-link--text-colour',
-  'Muted link': 'govuk-link--muted'
+  'Muted link': 'govuk-link--muted',
+  'Inverse': 'govuk-link--inverse'
+} %}
+
+{% set modifiers = {
+  'with no underline': 'govuk-link--no-underline'
 } %}
 
 {% set states = {
@@ -45,7 +50,7 @@
 
     {% for variant_description, variant_class in variants %}
 
-      <section class="govuk-!-margin-top-8">
+      <section class="govuk-!-margin-top-8"{% if variant_class == "govuk-link--inverse"%} style="background: #1d70b8; padding: 15px; margin: -15px;"{% endif %}>
         <h2 class="govuk-heading-l">{{ variant_description }}</h2>
 
       {% for state_description, state_class in states %}
@@ -54,6 +59,18 @@
             {{ state_description}}
           </a>
         </p>
+      {% endfor %}
+
+        {% for modifier_description, modifier_class in modifiers %}
+        <h3 class="govuk-heading-m">{{ modifier_description }}</h2>
+
+        {% for state_description, state_class in states %}
+          <p class="govuk-body">
+            <a href="/#{{ randomPageHash }}" class="govuk-link {{ variant_class }} {{ modifier_class }} {{ state_class }}">
+              {{ state_description}}
+            </a>
+          </p>
+        {% endfor %}
       {% endfor %}
       </section>
     {% endfor %}
