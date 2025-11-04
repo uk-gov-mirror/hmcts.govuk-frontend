@@ -118,6 +118,14 @@ We deprecated 14 as a point on our [type scale](https://design-system.service.go
 
 This change was introduced in [pull request #6417: Remove 14 from the type scale](https://github.com/alphagov/govuk-frontend/pull/6417)
 
+#### We've updated our responsive type scale
+
+We updated our responsive type scale behind the feature flag `$govuk-new-typography-scale` in [GOV.UK Frontend 5.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.2.0).
+
+These type scale changes are now on by default and the `$govuk-new-typography-scale` feature flag has been removed and does not change the behaviour of the type scale.
+
+This change was introduced in [pull request #6421: Turn the new type scale on by default](https://github.com/alphagov/govuk-frontend/pull/6421)
+
 ### Recommended changes
 
 #### Rename turquoise and pink coloured tags
