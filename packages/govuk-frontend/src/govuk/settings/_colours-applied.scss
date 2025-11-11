@@ -67,6 +67,10 @@ $_govuk-applied-colours: _govuk-define-applied-colours(
 ///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
 ///   function instead: `govuk-applied-colour(brand)`.
 
+@if variable-exists("govuk-brand-colour") {
+  @include _warning("legacy-applied-colours", "");
+}
+
 $govuk-brand-colour: govuk-applied-colour(brand);
 
 /// Text colour

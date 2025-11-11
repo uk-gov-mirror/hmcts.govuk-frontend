@@ -1,5 +1,7 @@
 const { compileSassString } = require('@govuk-frontend/helpers/tests')
 const { outdent } = require('outdent')
+const { sassNull } = require('sass-embedded')
+
 
 const allVariants = [
   'primary',
@@ -115,6 +117,17 @@ describe('Applied colours', () => {
   })
 
   describe('legacy variables', () => {
+
+    // Create a mock warn function that we can use to override the native @warn
+    // function, that we can make assertions about post-render.
+    const mockWarnFunction = jest.fn().mockReturnValue(sassNull)
+
+    const sassConfig = {
+      logger: {
+        warn: mockWarnFunction
+      }
+    }
+
     describe.each([
       'brand',
       'text',
@@ -145,6 +158,23 @@ describe('Applied colours', () => {
         const { css } = await compileSassString(sass)
 
         expect(css).toContain(`result: true;`)
+      })
+
+      it('logs a deprecation warning if an applied colour variable was set by the user', async () => {
+        const sass = `
+          $govuk-${appliedColourName}-colour: rebeccapurple;
+          @import "settings/colours-applied";
+        `
+
+        await compileSassString(sass, sassConfig)
+
+        // Expect our mocked @warn function to have been called once with a single
+        // argument, which should be the deprecation notice
+        expect(mockWarnFunction).toHaveBeenCalledWith(
+          `Using the \`$govuk-${appliedColourName}-colour\` variable to configure a new value is deprecated.` +
+          ` Please use \`$govuk-applied-colours: (${appliedColourName}: <NEW_COLOUR_VALUE>);\``,
+          expect.anything()
+        )
       })
     })
   })
