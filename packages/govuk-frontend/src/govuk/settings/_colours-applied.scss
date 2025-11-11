@@ -52,6 +52,207 @@ $_govuk-applied-colours: _govuk-define-applied-colours(
 );
 
 // =============================================================================
+// Legacy variables
+//
+// To help migrate to `govuk-applied-colour`, we're keeping the variables
+// which were previously storing the applied colours. This should reduce
+// breakage as teams upgrade
+// =============================================================================
+
+/// Brand colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(brand)`.
+
+$govuk-brand-colour: govuk-applied-colour(brand);
+
+/// Text colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(text)`.
+
+$govuk-text-colour: govuk-applied-colour(text);
+
+/// Template background colour
+///
+/// Used by components that want to give the illusion of extending
+/// the template background (such as the footer and cookie banner).
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(template-background)`.
+
+$govuk-template-background-colour: govuk-applied-colour(template-background);
+
+/// Body background colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(body-background)`.
+
+$govuk-body-background-colour: govuk-applied-colour(body-background);
+
+/// Text colour for print media
+///
+/// Use 'true black' to avoid printers using colour ink to print body text
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(print-text)`.
+
+$govuk-print-text-colour: govuk-applied-colour(print-text);
+
+/// Secondary text colour
+///
+/// Used in for example 'muted' text and help text.
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(secondary-text)`.
+
+$govuk-secondary-text-colour: govuk-applied-colour(secondary-text);
+
+/// Focus colour
+///
+/// Used for outline (and background, where appropriate) when interactive
+/// elements (links, form controls) have keyboard focus.
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(focus)`.
+
+$govuk-focus-colour: govuk-applied-colour(focus);
+
+/// Focused text colour
+///
+/// Ensure that the contrast between the text and background colour passes
+/// WCAG Level AA contrast requirements.
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(focus-text)`.
+
+$govuk-focus-text-colour: govuk-applied-colour(focus-text);
+
+/// Error colour
+///
+/// Used to highlight error messages and form controls in an error state
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(error)`.
+
+$govuk-error-colour: govuk-applied-colour(error);
+
+/// Success colour
+///
+/// Used to highlight success messages and banners
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(error)`.
+
+$govuk-success-colour: govuk-applied-colour(success);
+
+/// Border colour
+///
+/// Used in for example borders, separators, rules and keylines.
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(border)`.
+
+$govuk-border-colour: govuk-applied-colour(border);
+
+/// Input border colour
+///
+/// Used for form inputs and controls
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(input-border)`.
+
+$govuk-input-border-colour: govuk-applied-colour(input-border);
+
+/// Input hover colour
+///
+/// Used for hover states on form controls
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(hover)`.
+
+$govuk-hover-colour: govuk-applied-colour(hover);
+
+/// Link colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(link)`.
+
+$govuk-link-colour: govuk-applied-colour(link);
+
+/// Visited link colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(link-visited)`.
+
+$govuk-link-visited-colour: govuk-applied-colour(link-visited);
+
+/// Link hover colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(link-hover)`.
+
+$govuk-link-hover-colour: govuk-applied-colour(link-hover);
+
+/// Active link colour
+///
+/// @type Colour
+/// @access public
+/// @deprecated
+///   Variables for applied colours are deprecated. Please use the `govuk-applied-colour`
+///   function instead: `govuk-applied-colour(link-active)`.
+
+$govuk-link-active-colour: govuk-applied-colour(link-active);
+
+// =============================================================================
 // Brand refresh
 // =============================================================================
 

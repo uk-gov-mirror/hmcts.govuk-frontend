@@ -113,6 +113,41 @@ describe('Applied colours', () => {
         ' success, border, input-border, hover, link, link-visited, link-hover, link-active)'
     )
   })
+
+  describe('legacy variables', () => {
+    describe.each([
+      'brand',
+      'text',
+      'template-background',
+      'body-background',
+      'print-text',
+      'secondary-text',
+      'focus',
+      'focus-text',
+      'error',
+      'success',
+      'border',
+      'input-border',
+      'link',
+      'link-visited',
+      'link-hover',
+      'link-active',
+    ])("$govuk-%s-colour", (appliedColourName) => {
+      it('sets a Sass variable with the applied colour value', async () => {
+        const sass = `
+          @import "settings/colours-applied";
+
+          :root {
+            result: $govuk-${appliedColourName}-colour == govuk-applied-colour(${appliedColourName});
+          }
+        `
+
+        const { css } = await compileSassString(sass)
+
+        expect(css).toContain(`result: true;`)
+      })
+    })
+  })
 })
 
 describe('Organisation colours', () => {
